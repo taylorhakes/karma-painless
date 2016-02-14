@@ -1,0 +1,32 @@
+{
+  "name": "karma-painless",
+  "version": "1.0.0",
+  "description": "Karma plugin for painless test library",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taylorhakes/karma-painless.git"
+  },
+  "keywords": [
+    "karma-plugin",
+    "karma-adapter",
+    "painless"
+  ],
+  "author": "Taylor Hakes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taylorhakes/karma-painless/issues"
+  },
+  "homepage": "https://github.com/taylorhakes/karma-painless#readme",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "karma": "^0.13.21",
+    "karma-browserify": "^5.0.1",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-firefox-launcher": "^0.1.7",
+    "watchify": "^3.7.0"
+  }
+}
