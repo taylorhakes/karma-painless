@@ -3,7 +3,7 @@ var assert = painless.assert;
 var test = painless.createGroup('group name');
 
 test('sync 1', function() {
-  assert(true);
+  assert.deepEqual({ a: 'b' }, {a: 'c'});
 });
 
 test('sync 2', function() {

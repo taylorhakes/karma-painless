@@ -1,10 +1,12 @@
 {
   "name": "karma-painless",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Karma plugin for painless test library",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "build": "mkdir -p build && browserify adapter.js -o build/adapter.js",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",

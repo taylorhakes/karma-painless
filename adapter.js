@@ -1,8 +1,20 @@
 ;(function (window) {
+  var diff = require('variable-diff');
   window.__PAINLESS__ = [];
 
   function createPainlessStartFn(painlessHarnesses, karma) {
     function onTestDone(test, groupName) {
+      var log;
+      if (test.error) {
+        log = [test.error.message ? test.error.message : test.error];
+        if (test.error.actual && test.error.expected) {
+          log.push(diff(test.error.expected, test.error.actual).text);
+        }
+        if (test.error.stack) {
+          log.push(test.error.stack);
+        }
+      }
+
       karma.result({
         id: '',
         description: test.name,
@@ -10,7 +22,7 @@
         success: test.success,
         skipped: false,
         time: test.time,
-        log: ['some log'],
+        log: log ? log : [],
         assertionErrors: []
       });
     }

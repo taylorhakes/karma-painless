@@ -5,7 +5,7 @@ function createPattern(path) {
 }
 
 function initPainless(files) {
-  files.unshift(createPattern(__dirname + '/adapter.js'));
+  files.unshift(createPattern(__dirname + '/build/adapter.js'));
 }
 
 initPainless.$inject = ['config.files', 'config.client.painless']
