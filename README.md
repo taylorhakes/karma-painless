@@ -1,7 +1,14 @@
 # karma-painless
 A Karma plugin. Adapter for Painless test library.
 
-## Install
+## Setup
+
+### Install Karma
+First install [karma](https://karma-runner.github.io/0.13/intro/installation.html) and get it setup
+
+
+### Install karma-painless and browserify
+
 ```
 npm install karma-painless browserify --save-dev
 ```
@@ -33,4 +40,8 @@ module.exports = function(config) {
     });
 }
 ```
-    
+ 
+### Run your tests
+```
+karma start
+```
